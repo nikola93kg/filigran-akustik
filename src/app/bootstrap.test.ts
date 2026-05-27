@@ -1,19 +1,33 @@
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+
+const mocks = vi.hoisted(() => {
+  const renderMock = vi.fn();
+  const createRootMock = vi.fn(() => ({ render: renderMock }));
+
+  return { renderMock, createRootMock };
+});
+
+vi.mock('react-dom/client', () => ({
+  default: {
+    createRoot: mocks.createRootMock,
+  },
+}));
 
 describe('application bootstrap', () => {
-  it('loads the Tailwind entry stylesheet from main.tsx', () => {
-    const mainSource = readFileSync(resolve(process.cwd(), 'src/main.tsx'), 'utf8');
-
-    expect(mainSource).toContain("import './styles.css';");
+  afterEach(() => {
+    document.head.innerHTML = '';
+    document.body.innerHTML = '';
+    mocks.renderMock.mockClear();
+    mocks.createRootMock.mockClear();
+    vi.resetModules();
   });
 
-  it('defines the Tailwind base, components, and utilities layers', () => {
-    const stylesSource = readFileSync(resolve(process.cwd(), 'src/styles.css'), 'utf8');
+  it('mounts the app into the root element', async () => {
+    document.body.innerHTML = '<div id="root"></div>';
 
-    expect(stylesSource).toContain('@tailwind base;');
-    expect(stylesSource).toContain('@tailwind components;');
-    expect(stylesSource).toContain('@tailwind utilities;');
+    await import('../main');
+
+    expect(mocks.createRootMock).toHaveBeenCalledWith(document.getElementById('root'));
+    expect(mocks.renderMock).toHaveBeenCalledTimes(1);
   });
 });

@@ -1,14 +1,19 @@
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
-import { describe, expect, it } from 'vitest';
+import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { afterEach, describe, expect, it } from 'vitest';
 
-describe('App composition', () => {
-  it('delegates route definitions to the shared router module', () => {
-    const appSource = readFileSync(resolve(process.cwd(), 'src/App.tsx'), 'utf8');
+afterEach(() => {
+  window.history.pushState({}, '', '/');
+});
 
-    expect(appSource).toContain('RouterProvider');
-    expect(appSource).not.toContain('useInRouterContext');
-    expect(appSource).not.toContain('<Routes>');
-    expect(appSource).not.toContain('function AppRoutes');
+describe('App routing', () => {
+  it('renders the band page when the browser is on the band route', async () => {
+    window.history.pushState({}, '', '/bend');
+
+    const { default: App } = await import('../App');
+
+    render(React.createElement(App));
+
+    expect(screen.getByText('Bend')).toBeInTheDocument();
   });
 });
