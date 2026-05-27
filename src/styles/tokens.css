@@ -1,0 +1,12 @@
+:root {
+  --color-bg-base: #000010;
+  --color-bg-mid: #001020;
+  --color-bg-deep: #102030;
+  --color-gold: #D0A030;
+  --color-gold-light: #E8C050;
+  --color-text: #F0EAD8;
+  --color-text-muted: #8898A8;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --transition-base: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}

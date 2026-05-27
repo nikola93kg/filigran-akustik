@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "obsidian": {
+      "command": "npx",
+      "args": ["-y", "obsidian-mcp"],
+      "envFile": "${workspaceFolder}/.env",
+      "env": {
+        "OBSIDIAN_HOST": "https://127.0.0.1:27124"
+      }
+    }
+  }
+}

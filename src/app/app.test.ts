@@ -14,6 +14,6 @@ describe('App routing', () => {
 
     render(React.createElement(App));
 
-    expect(screen.getByText('Bend')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /ko smo mi/i })).toBeInTheDocument();
   });
 });
