@@ -1,3 +1,4 @@
+import type { RouteObject } from 'react-router-dom';
 import { createBrowserRouter } from 'react-router-dom';
 import { SiteShell } from '../components/layout/site-shell';
 import { BandPage } from '../pages/band-page';
@@ -5,7 +6,7 @@ import { ContactPage } from '../pages/contact-page';
 import { HomePage } from '../pages/home-page';
 import { PerformancesPage } from '../pages/performances-page';
 
-export const router = createBrowserRouter([
+export const routes: RouteObject[] = [
   {
     path: '/',
     element: <SiteShell />,
@@ -16,4 +17,6 @@ export const router = createBrowserRouter([
       { path: 'kontakt', element: <ContactPage /> },
     ],
   },
-]);
+];
+
+export const router = createBrowserRouter(routes);
