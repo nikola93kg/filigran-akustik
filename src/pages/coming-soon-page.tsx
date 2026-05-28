@@ -35,7 +35,7 @@ export function ComingSoonPage() {
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'min(900px, 90%)',
-          opacity: 0.04,
+          opacity: 0.08,
         }}
       />
 
