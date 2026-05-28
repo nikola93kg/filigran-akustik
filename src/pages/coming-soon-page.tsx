@@ -13,7 +13,7 @@ export function ComingSoonPage() {
         };
 
   return (
-    <div className="relative min-h-dvh bg-[#000010] flex flex-col items-center justify-center overflow-hidden px-6 py-16">
+    <div className="relative min-h-dvh bg-[#000010] flex flex-col items-center justify-center overflow-hidden px-4 sm:px-8 py-16">
       {/* Atmospheric glow */}
       <motion.div
         aria-hidden
@@ -62,7 +62,7 @@ export function ComingSoonPage() {
       />
 
       {/* Main content */}
-      <main className="relative z-10 flex flex-col items-center text-center">
+      <main className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center px-2">
         <motion.p
           {...fade(0.05)}
           className="text-[#D0A030] text-[0.75rem] font-normal tracking-[0.3em] uppercase mb-8"
@@ -72,10 +72,10 @@ export function ComingSoonPage() {
 
         <motion.h1
           {...fade(0.15)}
-          className="text-[#F0EAD8] leading-[1.05]"
+          className="text-[#F0EAD8] leading-[1.05] w-full text-center"
           style={{
             fontFamily: "'Edwardian Script ITC', cursive",
-            fontSize: 'clamp(4.5rem, 15vw, 11rem)',
+            fontSize: 'clamp(3rem, 14vw, 11rem)',
           }}
         >
           Filigran akustik
