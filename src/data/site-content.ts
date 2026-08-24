@@ -3,7 +3,7 @@ export const siteContent = {
     tagline: 'Akustični nastup · Srbija',
     headline: 'Filigran akustik',
     subheadline:
-      'Premium akustični duo za venčanja, svečane večeri i privatne proslave.',
+      'Premium akustični bend za venčanja, svečane večeri i privatne proslave.',
     cta: 'Pošalji upit',
   },
 
@@ -11,7 +11,7 @@ export const siteContent = {
     subtitle: 'O bendu',
     headline: 'Muzika koja\nostaje u sećanju',
     paragraphs: [
-      'Filigran Akustik je akustični duo koji spaja emotivnu interpretaciju sa pažljivo odabranim repertoarom. Svaki nastup je jedinstven — usklađen sa atmosferom i željama domaćina.',
+      'Filigran Akustik je akustični bend koji spaja emotivnu interpretaciju, prepoznatljive instrumentalne boje i pažljivo odabran repertoar. Svaki nastup je jedinstven — usklađen sa atmosferom i željama domaćina.',
       'Nastupamo na venčanjima, svečanim večerama, korporativnim događajima i privatnim proslavama širom Srbije.',
     ],
     eventTypes: [
@@ -65,7 +65,45 @@ export const siteContent = {
       subtitle: 'Bend',
       headline: 'Ko smo mi',
       intro:
-        'Filigran Akustik je nastao iz ljubavi prema čistom zvuku i intimnoj muzičkoj atmosferi. Dva muzičara, jedna misija — da svaki događaj učine nezaboravnim.',
+        'Filigran Akustik je nastao iz ljubavi prema čistom zvuku i intimnoj muzičkoj atmosferi. Pet muzičara, jedan osećaj za meru — da svaki događaj dobije zvuk koji mu prirodno pripada.',
+    },
+    parallax: {
+      subtitle: 'Članovi benda',
+      headline: 'Sastav koji diše kao jedan',
+      body:
+        'Saksofon i klarinet donose boju i eleganciju, violina i vokal nose emociju, dok gitara, bas i kahon drže toplinu i ritam nastupa.',
+      members: [
+        {
+          name: 'Saksofon i klarinet',
+          role: 'Jedan muzičar, dve boje zvuka — od nežnog klarineta do svečanog saksofona.',
+          initials: 'SK',
+          photo: '/assets/band/sax-clarinet-placeholder.jpg',
+        },
+        {
+          name: 'Violina i vokal',
+          role: 'Violinistkinja koja peva i vodi emotivnu liniju nastupa.',
+          initials: 'VV',
+          photo: '/assets/band/violin-vocal-placeholder.jpg',
+        },
+        {
+          name: 'Gitara',
+          role: 'Akustična pratnja, ritam i aranžmani prilagođeni prostoru i događaju.',
+          initials: 'G',
+          photo: '/assets/band/guitar-placeholder.jpg',
+        },
+        {
+          name: 'Bas gitara',
+          role: 'Topao fundament koji povezuje harmoniju, groove i dinamiku benda.',
+          initials: 'B',
+          photo: '/assets/band/bass-placeholder.jpg',
+        },
+        {
+          name: 'Kahon',
+          role: 'Perkusije koje daju puls nastupu bez narušavanja akustične intime.',
+          initials: 'K',
+          photo: '/assets/band/cajon-placeholder.jpg',
+        },
+      ],
     },
     sections: [
       {

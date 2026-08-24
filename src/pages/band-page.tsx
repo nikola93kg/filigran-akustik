@@ -3,6 +3,7 @@ import { SectionHeading } from '../components/ui/section-heading';
 import { GoldButton } from '../components/ui/gold-button';
 import { Reveal } from '../components/ui/reveal';
 import { BookingCtaSection } from '../components/sections/booking-cta-section';
+import { BandParallaxSection } from '../components/sections/band-parallax-section';
 import { siteContent } from '../data/site-content';
 
 const { bandPage } = siteContent;
@@ -32,6 +33,8 @@ export function BandPage() {
           </Reveal>
         </div>
       </SectionShell>
+
+      <BandParallaxSection />
 
       {/* Sections */}
       {bandPage.sections.map((section, i) => (

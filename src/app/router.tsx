@@ -8,7 +8,7 @@ import { HomePage } from '../pages/home-page';
 import { PerformancesPage } from '../pages/performances-page';
 
 // Set VITE_COMING_SOON=true in .env to show the coming-soon page instead of the full site.
-const isComingSoon = import.meta.env.VITE_COMING_SOON === 'true';
+const isComingSoon = import.meta.env.VITE_COMING_SOON === 'false';
 
 export const routes: RouteObject[] = isComingSoon
   ? [{ path: '*', element: <ComingSoonPage /> }]

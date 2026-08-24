@@ -10,9 +10,27 @@ export function BandStorySection() {
   return (
     <SectionShell
       id="bend"
-      className="bg-[#001020] py-28 md:py-36"
+      className="overflow-hidden bg-[#001020] py-28 md:py-36"
     >
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-cover bg-center opacity-35"
+        style={{ backgroundImage: "url('/assets/filigranInstruments.webp')" }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[#000010]/78 backdrop-blur-[1px]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            'linear-gradient(135deg, rgba(208,160,48,0.12) 0%, transparent 38%, rgba(0,0,16,0.92) 100%)',
+        }}
+      />
+
+      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         {/* Text */}
         <div>
           <Reveal>
